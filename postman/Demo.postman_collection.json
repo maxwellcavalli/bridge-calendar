@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "750aa7b9-9b39-4a8c-80c4-61a47972a1b3",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5816244"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "David",
+					"item": [
+						{
+							"name": "POST Employee",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"employee_id\", pm.response.json().id)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Employee",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATH Employee",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Employee",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ingrid",
+					"item": [
+						{
+							"name": "Create Employee  - Ingrid",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"employee_id\", pm.response.json().id)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ingrid\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Employee",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATH Employee",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Employee",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Ingrid\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employee",
+										"{{employee_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee  - List ALL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//david\r",
+									"//pm.environment.set(\"employee_id\", pm.response.json().content[0].id)\r",
+									"\r",
+									"//ingrid\r",
+									"pm.environment.set(\"employee_id\", pm.response.json().content[1].id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Candidate",
+			"item": [
+				{
+					"name": "Carl",
+					"item": [
+						{
+							"name": "Create Candidate  - Carl",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"candidate_id\", pm.response.json().id)"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Carl\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/candidate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET Candidate",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidate",
+										"{{candidate_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PATH Candidate",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Carl\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidate",
+										"{{candidate_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT Candidate",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Carl\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"10:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        }\r\n    ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidate",
+										"{{candidate_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Candidate - List ALL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"//carl\r",
+									"pm.environment.set(\"candidate_id\", pm.response.json().content[0].id)\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/candidate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calendar",
+			"item": [
+				{
+					"name": "Free Slot Time",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/calendar/{{candidate_id}}/27",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"calendar",
+								"{{candidate_id}}",
+								"27"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
