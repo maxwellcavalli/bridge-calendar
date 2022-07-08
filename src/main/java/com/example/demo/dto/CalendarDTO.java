@@ -35,7 +35,7 @@ public class CalendarDTO {
 
     private Set<PeriodDTO> afternoon;
 
-    public static Set<CalendarDTO> listOf(final Set<CalendarAvailability> calendarAvailabilities) {
+    public static LinkedHashSet<CalendarDTO> listOf(final Set<CalendarAvailability> calendarAvailabilities) {
         LinkedHashSet<CalendarDTO> returnList = new LinkedHashSet<>();
 
         Map<Integer, List<CalendarAvailability>> weekData = calendarAvailabilities.stream()
