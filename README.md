@@ -19,4 +19,9 @@ and finally, run
 
 you can check the database data execution the "get" provided in this collection or accessing the database using 
 
+### H2
 http://localhost:8080/h2-console
+
+
+### swagger 
+http://localhost:8080/swagger-ui/index.html
