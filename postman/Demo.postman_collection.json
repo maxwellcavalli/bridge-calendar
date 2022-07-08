@@ -44,14 +44,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee",
+									"raw": "http://localhost:8080/v1/employees",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee"
+										"v1",
+										"employees"
 									]
 								}
 							},
@@ -69,14 +70,15 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -99,14 +101,15 @@
 									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -129,14 +132,15 @@
 									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -180,14 +184,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee",
+									"raw": "http://localhost:8080/v1/employees",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee"
+										"v1",
+										"employees"
 									]
 								}
 							},
@@ -205,14 +210,15 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -235,14 +241,15 @@
 									"raw": "{\r\n    \"name\": \"David\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"16:00\"\r\n                }\r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -265,14 +272,15 @@
 									"raw": "{\r\n    \"name\": \"Ingrid\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n            ],\r\n            \"afternoon\": [\r\n                {\r\n                    \"start\": \"12:00\",\r\n                    \"end\": \"18:00\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        }\r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/employee/{{employee_id}}",
+									"raw": "http://localhost:8080/v1/employees/{{employee_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"employee",
+										"v1",
+										"employees",
 										"{{employee_id}}"
 									]
 								}
@@ -308,14 +316,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/employee",
+							"raw": "http://localhost:8080/v1/employees",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"employee"
+								"v1",
+								"employees"
 							]
 						}
 					},
@@ -361,14 +370,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/candidate",
+									"raw": "http://localhost:8080/v1/candidates",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"candidate"
+										"v1",
+										"candidates"
 									]
 								}
 							},
@@ -386,14 +396,15 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"raw": "http://localhost:8080/v1/candidates/{{candidate_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"candidate",
+										"v1",
+										"candidates",
 										"{{candidate_id}}"
 									]
 								}
@@ -416,14 +427,15 @@
 									"raw": "{\r\n    \"name\": \"Carl\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        }\r\n        \r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"raw": "http://localhost:8080/v1/candidates/{{candidate_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"candidate",
+										"v1",
+										"candidates",
 										"{{candidate_id}}"
 									]
 								}
@@ -446,14 +458,15 @@
 									"raw": "{\r\n    \"name\": \"Carl\",\r\n    \"calendar\": [\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"MONDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n                \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"TUESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"WEDNESDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"10:00\",\r\n                    \"end\": \"12:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"THURSDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        },\r\n        {\r\n            \"weekNumber\": 27,\r\n            \"dayOfWeek\": \"FRIDAY\",\r\n            \"morning\": [\r\n                {\r\n                    \"start\": \"09:00\",\r\n                    \"end\": \"10:00\"\r\n                }\r\n            ],\r\n            \"afternoon\": [\r\n               \r\n            ]\r\n        }\r\n    ]\r\n}"
 								},
 								"url": {
-									"raw": "http://localhost:8080/candidate/{{candidate_id}}",
+									"raw": "http://localhost:8080/v1/candidates/{{candidate_id}}",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "8080",
 									"path": [
-										"candidate",
+										"v1",
+										"candidates",
 										"{{candidate_id}}"
 									]
 								}
@@ -488,14 +501,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/candidate",
+							"raw": "http://localhost:8080/v1/candidates",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"candidate"
+								"v1",
+								"candidates"
 							]
 						}
 					},
@@ -518,14 +532,15 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8080/calendar/{{candidate_id}}/27",
+							"raw": "http://localhost:8080/v1/calendars/{{candidate_id}}/27",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"calendar",
+								"v1",
+								"calendars",
 								"{{candidate_id}}",
 								"27"
 							]
