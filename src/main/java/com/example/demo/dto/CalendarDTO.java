@@ -1,7 +1,6 @@
 package com.example.demo.dto;
 
 import com.example.demo.domain.CalendarAvailability;
-import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.Max;
@@ -20,7 +19,6 @@ import java.util.stream.Collectors;
 
 
 @Data
-@Builder
 public class CalendarDTO {
 
     @NotNull(message = "weekNumber cannot be null")
@@ -71,22 +69,20 @@ public class CalendarDTO {
         int groupIndex = 0;
         Map<Integer, List<CalendarAvailability>> gapGroup = extractDayPeriodTime(hours, groupIndex);
 
-        CalendarDTO calendarDTO = CalendarDTO.builder()
-                .weekNumber(weekNumber)
-                .dayOfWeek(dayOfWeek)
-                .afternoon(new LinkedHashSet<>())
-                .morning(new LinkedHashSet<>())
-                .build();
+        CalendarDTO calendarDTO = new CalendarDTO();
+        calendarDTO.setWeekNumber(weekNumber);
+        calendarDTO.setDayOfWeek(dayOfWeek);
+        calendarDTO.setAfternoon(new LinkedHashSet<>());
+        calendarDTO.setMorning(new LinkedHashSet<>());
 
         for (Map.Entry<Integer, List<CalendarAvailability>> integerListEntry : gapGroup.entrySet()) {
 
             LocalTime startTime = integerListEntry.getValue().get(0).getStartTime();
             LocalTime endTime = integerListEntry.getValue().get(integerListEntry.getValue().size() - 1).getEndTime();
 
-            PeriodDTO periodDTO = PeriodDTO.builder()
-                    .start(startTime)
-                    .end(endTime)
-                    .build();
+            PeriodDTO periodDTO = new PeriodDTO();
+            periodDTO.setStart(startTime);
+            periodDTO.setEnd(endTime);
 
             if (endTime.getHour() <= 12) {
                 calendarDTO.getMorning().add(periodDTO);
