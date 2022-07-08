@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("calendar")
+@RequestMapping("/v1/calendars")
 public class CalendarController {
 
     private CalendarFacade calendarFacade;

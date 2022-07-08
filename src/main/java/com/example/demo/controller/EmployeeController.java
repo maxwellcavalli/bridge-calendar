@@ -21,7 +21,7 @@ import javax.validation.Valid;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("employee")
+@RequestMapping("/v1/employees")
 public class EmployeeController {
 
     private EmployeeFacade employeeFacade;
