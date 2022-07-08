@@ -19,7 +19,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.environment.set(\"employee_id\", pm.response.json().id)"
+											"pm.environment.set(\"candidate_id\", pm.response.headers.get('Location'))"
 										],
 										"type": "text/javascript"
 									}
@@ -345,7 +345,7 @@
 									"listen": "test",
 									"script": {
 										"exec": [
-											"pm.environment.set(\"candidate_id\", pm.response.json().id)"
+											"pm.environment.set(\"candidate_id\", pm.response.headers.get('Location'))"
 										],
 										"type": "text/javascript"
 									}
