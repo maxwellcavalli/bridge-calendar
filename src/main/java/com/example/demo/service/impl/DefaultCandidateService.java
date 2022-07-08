@@ -44,7 +44,8 @@ public class DefaultCandidateService implements CandidateService {
 
     @Override
     public Optional<Candidate> get(long id) {
-        return candidateRepository.findById(id);
+        return Optional.ofNullable(candidateRepository.findById(id)
+                .orElseThrow(() -> new CandidateNotFoundException(String.valueOf(id))));
     }
 
     @Override

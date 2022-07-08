@@ -45,7 +45,8 @@ public class DefaultEmployeeService implements EmployeeService {
 
     @Override
     public Optional<Employee> get(long id) {
-        return employeeRepository.findById(id);
+        return Optional.ofNullable(employeeRepository.findById(id)
+                .orElseThrow(() -> new EmployeeNotFoundException(String.valueOf(id))));
     }
 
     @Override
